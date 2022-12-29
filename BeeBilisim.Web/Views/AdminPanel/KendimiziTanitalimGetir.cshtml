@@ -1,0 +1,37 @@
+﻿@model BeeBilisim.Web.Models.HakkimizdaModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "KendimiziTanitalimGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+
+<h2 class="text-center">KENDİMİZİ TANITALIM BİLGİSİ</h2>
+@using (Html.BeginForm("KendimiziTanitalimGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Kişi 1: </label><br />
+            @Html.TextBoxFor(q => q.KendimiziTanitalim1, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Kişi 2: </label><br />
+            @Html.TextBoxFor(q => q.KendimiziTanitalim2, new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+
+

@@ -1,0 +1,66 @@
+﻿@model BeeBilisim.Web.Models.EmailData
+
+@{
+    ViewData["Title"] = "SendEmail";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+<h2 style="text-align:center;">Mail Gönderme</h2> <br />
+    <div class="col-md-12">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SendEmail" method="post">
+            <div class="col-12 mb-3">
+                <label asp-for="To" class="text-success">Email adresi: </label>
+                <input asp-for="To" class="form-control" />
+                <span asp-validation-for="From" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Subject" class="text-success">Konu:</label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <label asp-for="Body" class="text-success">Mesajınız:</label>
+                <textarea asp-for="Body" class="form-control" id="editor" rows="3" ></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-outline-success">Gönder</button>
+            </div>
+        </form>
+    </div>
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+
+    $(document).ready(function () {
+        $("#form").on('submit', (function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: $(this).attr('action'),
+                type: "POST",
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function (response) {
+                    $("#form").trigger("reset"); // to reset form input fields
+                },
+                error: function (e) {
+                    alert("HATA!" + e);
+                }
+            });
+        }));
+    });
+</script>
+
+

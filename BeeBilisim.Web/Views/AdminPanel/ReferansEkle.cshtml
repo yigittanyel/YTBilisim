@@ -1,0 +1,53 @@
+﻿@model BeeBilisim.Web.Models.ReferasanslarModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+
+
+@{
+    ViewData["Title"] = "ReferansEkle";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+<h1>Yeni Referans Ekle</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4" style="margin-left:10px;">
+        <form asp-action="ReferansEkle" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <b>Referans Website Adresi:</b>
+                <input asp-for="ReferansWebsite" class="form-control" />
+                <span asp-validation-for="ReferansWebsite" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <b>Kaçıncı Sırada Gösterilsin?</b>
+                <input asp-for="Sira" class="form-control" value="@ViewBag.SonSira"  />
+                <span asp-validation-for="Sira" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <b>DOSYA SEÇİNİZ</b><br />
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input type="hidden" name="CreateUser" value="@displayName">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="EKLE" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+

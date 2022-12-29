@@ -1,0 +1,86 @@
+﻿@using BeeBilisim.Web.Models
+@model List<ReferasanslarModel>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--auto compiled css & Js-->
+    <script type="text/javascript"
+            src="//code.jquery.com/jquery-1.9.1.js">
+    </script>
+
+
+    <script type="text/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+
+
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $(".carousel .item").each(function () {
+                var i = $(this).next();
+                i.length || (i = $(this).siblings(":first")),
+                    i.children(":first-child").clone().appendTo($(this));
+
+                for (var n = 0; n < 4; n++)(i = i.next()).length ||
+                    (i = $(this).siblings(":first")),
+                    i.children(":first-child").clone().appendTo($(this))
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1 style="text-align:center;">REFERANSLARIMIZ</h1>
+    <hr />
+    <!-- container class for bootstrap card-->
+    <div class="container">
+        <!-- bootstrap card with row name myCarousel as row 1-->
+        <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+
+                @foreach (var x in Model)
+                {
+                    <div class="item @(x == Model.First() ? "active" : "")">
+                        <div class="col-xs-2">
+                            <a href="@x.ReferansWebsite" target="_blank"><img src="@("~/images/"+x.ImageName)" asp-append-version="true" width="106%" height="150" id="myReferans"> </a>
+                            <hr>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <a class="left carousel-control"
+               href="#myCarousel"
+               data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left">
+                </i>
+            </a>
+
+            <a class="right carousel-control"
+               href="#myCarousel"
+               data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right">
+                </i>
+            </a>
+
+        </div>
+    </div>
+
+    <style>
+
+        /* BUNU MEDIA'YA GÖRE DEĞİŞEN ŞEKİLDE CSS'E EKLEYECEĞİM */
+        #myReferans {
+            border: 5px solid transparent;
+            border-radius: 5px;
+
+    </style>
+
+</body>
+
+</html>
+

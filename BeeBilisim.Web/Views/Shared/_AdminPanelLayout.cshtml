@@ -1,0 +1,212 @@
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    Layout = null;
+
+string displayName =  httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>YÖNETİM PANELİ</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <style>
+        #liCikis a:hover {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+           <h5 style="color:white;margin:10px;" class="text-center">@displayName</h5>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                             with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    ANA SAYFA
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("GenelDuzenleme","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Genel Düzenlemeler</p>
+                                    </a>
+                                </li>
+@*
+                                <li class="nav-item">
+                                    <a href="@Url.Action("SliderListesi","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Slider-Carousel</p>
+                                    </a>
+                                </li>*@
+                                <li class="nav-item">
+                                    <a href="@Url.Action("ReferansListesi","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Referanslar</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("GelenYorumlarListesi","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Müşteri Yorumları</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    HAKKIMIZDA
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("HakkimizdaGenelDuzenleme","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Genel Düzenlemeler</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    İLETİŞİM
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("IletisimGenelDuzenleme","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>İletişim | Harita Bilgileri</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("GelenMesajlar","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> Gelen Mesajlar </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+@*                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("SendEmail","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> Mail Gönder </p>
+                                    </a>
+                                </li>
+
+                            </ul>*@
+
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    KULLANICI İŞLEMLERİ
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("KisiBilgileri","AdminPanel")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Bilgileri Güncelle</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <br />
+                              <li class="nav-item" id="liCikis">
+                            <a href="/Anasayfa/Index" class="nav-link">
+                                <p>
+                                    <i class="right fas fa-solid fa-house-user"></i>
+                                    SİTEYE GİT
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="liCikis">
+                             <a href="/Login/CikisYap" class="nav-link" onclick="return confirm('Çıkış yapmak istediğinizden emin misiniz?');">
+                                <p>
+                                    <i class="right fas fa-solid fa-arrow-right"></i>
+                                    ÇIKIŞ YAP
+                                </p>
+                            </a>
+                        </li>
+                      
+                    </ul>
+
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <div class="content">
+                @RenderBody()
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="~/AdminLTE-3.0.4/dist/js/adminlte.js"></script>
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="~/AdminLTE-3.0.4/plugins/chart.js/Chart.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
+    <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard3.js"></script>
+</body>
+</html>

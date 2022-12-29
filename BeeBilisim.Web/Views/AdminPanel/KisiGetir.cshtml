@@ -1,0 +1,55 @@
+﻿@model BeeBilisim.Web.Models.Kullanicilars
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "KisiGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+<h2>Kişi Bilgileri</h2>
+@using (Html.BeginForm("KisiGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Ad: </label><br />
+            @Html.TextBoxFor(q => q.Ad, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Soyad: </label><br />
+            @Html.TextBoxFor(q => q.Soyad, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Email: </label><br />
+            @Html.TextBoxFor(q => q.Email, new { @class = "form-control",type="email" })
+        </div>
+        <div>
+            <label>Telefon: </label><br />
+            @Html.TextBoxFor(q => q.Telefon, new { @class = "form-control" })
+        </div><br>
+        <h4> Şifrenizi de düzenleyin: </h4>
+        <hr>
+        <div>
+            <label>Yeni Şifrenizi giriniz: </label><br />
+            <input type="password" name="Sifre" class="form-control">
+        </div>
+        <div>
+            <label>Tekrar giriniz: </label><br />
+            <input type="password" name="Sifre2" class="form-control">
+        </div>
+        <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+        <br>
+
+        <span style="font-weight:Bold;" class="text-danger">@ViewBag.hata</span>
+    </div>
+}
+

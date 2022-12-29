@@ -1,0 +1,36 @@
+﻿@using BeeBilisim.Web.Models
+@model List<IletisimModel>
+@{
+    Layout = "";
+
+}
+
+<br>
+<h2 class="text-center">İLETİŞİM BİLGİSİ</h2>
+<br />
+<table class="table table-bordered col-md-12">
+    <thead>
+        <tr>
+            <th scope="col">Adres Metni</th>
+            <th scope="col">Adres IFrame(Google Haritalar Kodu)</th>
+            <th scope="col">Email</th>
+            <th scope="col">Fax</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.AdresMetin</td>
+                <td>@(x.AdresIFrame.Trim().Length<100 ? x.AdresIFrame: x.AdresIFrame.Substring(0,150))</td>
+                <td>@x.Email</td>
+                <td>@x.Fax</td>
+                <td>@x.Telefon</td>
+                <td><a href="/AdminPanel/IletisimGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

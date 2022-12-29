@@ -1,0 +1,42 @@
+﻿@model BeeBilisim.Web.ViewModels.AnasayfaViewModel
+
+
+
+
+<section class="w3l-clients-1" id="testimonials">
+    <div class="cusrtomer-layout py-5">
+        <div class="container py-lg-5 py-md-4">
+            <div class="heading align-self text-center">
+                <h3 class="title-big mb-md-5 mb-4">Müşterilerimizden Gelen Yorumlar</h3>
+            </div>
+            <!-- /grids -->
+            <div class="testimonial-row">
+                <div id="owl-demo1" class="owl-two owl-carousel owl-theme mb-md-3 mb-5">
+                    @foreach(var x in Model.AnasayfaMusteriYorumlariModel){
+                        <div class="item">
+                            <div class="testimonial-content">
+                                <div class="testimonial">
+
+                                    <blockquote>
+                                        <q>
+                                            @x.Yorum
+                                        </q>
+                                    </blockquote>
+                                    <div class="testi-des">
+                                        <div class="peopl align-self">
+                                            <h3>Sn. @x.MusteriAdi</h3>
+                                            <p class="indentity">@x.MusteriTitle</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+        <!-- /grids -->
+    </div>
+    <!-- //grids -->
+</section>

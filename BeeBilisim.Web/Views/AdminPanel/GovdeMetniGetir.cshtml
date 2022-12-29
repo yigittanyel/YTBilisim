@@ -1,0 +1,38 @@
+﻿@model BeeBilisim.Web.Models.AnasayfaModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "GovdeMetniGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+<h2>Gövde Metni Bilgileri</h2>
+@using (Html.BeginForm("GovdeMetniGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Başlık: </label><br />
+            @Html.TextBoxFor(q => q.GovdeMetinBasligi, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Açıklama 1(Sol Taraf): </label><br />
+            @Html.TextBoxFor(q => q.GovdeMetinAciklama1, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Açıklama 2(Sağ Taraf): </label><br />
+            @Html.TextBoxFor(q => q.GovdeMetinAciklama2, new { @class = "form-control" })
+        </div>
+                <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+

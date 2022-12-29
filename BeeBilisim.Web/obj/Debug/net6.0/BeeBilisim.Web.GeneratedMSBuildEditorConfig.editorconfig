@@ -1,0 +1,284 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BeeBilisim.Web
+build_property.RootNamespace = BeeBilisim.Web
+build_property.ProjectDir = C:\Users\MSI\Desktop\reposs\BeeProje\BeeBilisim.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\MSI\Desktop\reposs\BeeProje\BeeBilisim.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/BizKimizGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxCaXpLaW1pekdldGlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/BizKimizPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxCaXpLaW1pelBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/GelenMesajlar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxHZWxlbk1lc2FqbGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/GelenYorumlarListesi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxHZWxlbllvcnVtbGFyTGlzdGVzaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/GenelDuzenleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxHZW5lbER1emVubGVtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/GovdeMetniGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxHb3ZkZU1ldG5pR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/GovdeMetniGoruntule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxHb3ZkZU1ldG5pR29ydW50dWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/HakkimizdaGenelDuzenleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxIYWtraW1pemRhR2VuZWxEdXplbmxlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/IletisimGenelDuzenleme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbGV0aXNpbUdlbmVsRHV6ZW5sZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/IletisimGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbGV0aXNpbUdldGlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/IletisimPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbGV0aXNpbVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/KendimiziTanitalimGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxLZW5kaW1pemlUYW5pdGFsaW1HZXRpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/KendimiziTanitalimPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxLZW5kaW1pemlUYW5pdGFsaW1QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/KisiBilgileri.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxLaXNpQmlsZ2lsZXJpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/KisiGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxLaXNpR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/MesajDetayi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxNZXNhakRldGF5aS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/MisyonumuzGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxNaXN5b251bXV6R2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/MisyonumuzPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxNaXN5b251bXV6UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/NedenBizGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxOZWRlbkJpekdldGlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/NedenBizGoruntule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxOZWRlbkJpekdvcnVudHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/ReferansEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxSZWZlcmFuc0VrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/ReferanslariGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxSZWZlcmFuc2xhcmlHZXRpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/ReferansListesi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxSZWZlcmFuc0xpc3Rlc2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SendEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTZW5kRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SentEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTZW50RW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SliderGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTbGlkZXJHZXRpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SliderListesi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTbGlkZXJMaXN0ZXNpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SloganGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTbG9nYW5HZXRpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SloganGoruntule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTbG9nYW5Hb3J1bnR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/SloganGoruntulePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTbG9nYW5Hb3J1bnR1bGVQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/TelefonFaxEmailGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxUZWxlZm9uRmF4RW1haWxHZXRpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/TelefonFaxEmailGoruntule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxUZWxlZm9uRmF4RW1haWxHb3J1bnR1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/TelefonGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxUZWxlZm9uR2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/TelefonPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxUZWxlZm9uUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/VizyonumuzGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxWaXp5b251bXV6R2V0aXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/VizyonumuzPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxWaXp5b251bXV6UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/YeniKisiEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxZZW5pS2lzaUVrbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/YeniSliderEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxZZW5pU2xpZGVyRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/YeniYorumEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxZZW5pWW9ydW1Fa2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AdminPanel/YorumGetir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxZb3J1bUdldGlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AnaSayfa/AnaSayfaSlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcQW5hU2F5ZmFTbGlkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AnaSayfa/GetImages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcR2V0SW1hZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AnaSayfa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AnaSayfa/MusteriYorumlari.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcTXVzdGVyaVlvcnVtbGFyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/AnaSayfa/Referanslar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcUmVmZXJhbnNsYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Hakkimizda/HakkimizdaSlider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFra2ltaXpkYVxIYWtraW1pemRhU2xpZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Hakkimizda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFra2ltaXpkYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Home/Deneme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZW5lbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Iletisim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxldGlzaW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Iletisim/SendEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxldGlzaW1cU2VuZEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Iletisim/SentEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxldGlzaW1cU2VudEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Iletisim/YorumYap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxldGlzaW1cWW9ydW1ZYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Login/GirisYap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cR2lyaXNZYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/Components/Hakkimizda/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGFra2ltaXpkYVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_AdminPanelLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblBhbmVsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_CaptchaInput.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXB0Y2hhSW5wdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_CaptchaScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXB0Y2hhU2NyaXB0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_MainLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MSI/Desktop/reposs/BeeProje/BeeBilisim.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xre30x24h3

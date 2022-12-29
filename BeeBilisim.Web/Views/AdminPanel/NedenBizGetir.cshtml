@@ -1,0 +1,62 @@
+﻿@model BeeBilisim.Web.Models.AnasayfaModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "NedenBizGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+
+<h2 class="text-center">NEDEN BİZ SAYFASI BİLGİLERİ</h2>
+@using (Html.BeginForm("NedenBizGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Neden Biz Metni: </label><br />
+            @Html.TextBoxFor(q => q.NedenBizMetin, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Neden Biz Sol Taraf 1. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSol1, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Neden Biz Sol Taraf 2. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSol2, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Neden Biz Sol Taraf 3. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSol3, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Neden Biz Sağ Taraf 1. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSag1, new { @class = "form-control" })
+        </div>
+                <div>
+            <label>Neden Biz Sağ Taraf 2. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSag2, new { @class = "form-control" })
+        </div>
+                <div>
+            <label>Neden Biz Sağ Taraf 3. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSag3, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Neden Biz Sağ Taraf 4. Madde </label><br />
+            @Html.TextBoxFor(q => q.NedenBizSag4, new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+
+
+

@@ -1,0 +1,44 @@
+﻿@using BeeBilisim.Web.Models
+@model List<EmailData>
+@{
+    ViewData["Title"] = "GelenMesajlar";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h2 style="text-align:center;">GELEN MESAJLAR</h2>
+            <div class="col-md-12" style="margin-top:30px;">
+                <div class="card card-primary card-outline">
+                    <div class="card-body p-0">
+                        <div class="table-responsive mailbox-messages">
+                            <table class="table table-hover table-striped">
+                                <tbody>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td class="mailbox-star"><a href="/AdminPanel/MesajDetayi/@x.Id"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/AdminPanel/MesajDetayi/@x.Id">@x.Ad</a></td>
+                                            <td class="mailbox-subject">
+                                                <a href="/AdminPanel/MesajDetayi/@x.Id" style="color:black;"> <b>Konu: @x.Subject </b></a>    <br>
+
+                                                <a href="/AdminPanel/MesajDetayi/@x.Id" style="color:black;font-weight:500;">
+                                                    @(x.Body.Length > 50 ? x.Body.Substring(0, 50) : x.Body)
+                                                    </a>
+
+                                            </td>
+                                            <td class="mailbox-date">@x.GonderilmeTarihi.ToString("dddd, dd MMMM yyyy")</td>
+                                <td><a href="/AdminPanel/GelenMesajSil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinizden emin misiniz?');">Sil</a></td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                            <!-- /.table -->
+                        </div>
+                        <!-- /.mail-box-messages -->
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->

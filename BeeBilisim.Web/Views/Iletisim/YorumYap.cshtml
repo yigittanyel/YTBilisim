@@ -1,0 +1,65 @@
+﻿
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+@*//Recaphta
+*@
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LdS2XcjAAAAAEcULxsAtRCGW5noo5goKSRjOM0l"></script>
+<script>
+    $(document).on('click', '#myform', function (e) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdS2XcjAAAAAEcULxsAtRCGW5noo5goKSRjOM0l', { action: 'submit' }).then(function (token) {
+                $("#captchaInput").val(token);
+            });
+        });
+            });
+</script>
+
+
+
+
+
+    <div class="col-lg-6">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="YorumYap" id="myform" method="post" class="text-right">
+        <input type="hidden" name="Captcha" id="captchaInput" required />
+            <div class="form-grid">
+                <input type="hidden" value="@ViewBag.deger" name="Id" required />
+                <input type="hidden"  name="Captcha" required />
+                <input type="text" placeholder="Ad-Soyad giriniz" name="Ad" required />
+                <input type="email" name="To" placeholder="Email Adresiniz" required />
+                <input type="tel" name="Telefon" id="w3lPhone" placeholder="Telefon giriniz" maxlength="11" required>
+                <input type="text" name="Subject" placeholder="Konu" required />
+            </div>
+            <br />
+            <textarea name="Body" placeholder="Mesajınız" rows="5" required></textarea> <br />
+            <input type="submit" class="btn btn-success" style="border:2px solid black;font-size:2em;color:black;font-weight:500;" value="MESAJI GÖNDER">
+
+    </form>
+    </div>
+
+
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+
+    $(function () {
+        $(function () {
+            $("form").submit(function () {
+                alert("Mesajınız alınmıştır. İyi günler dileriz 😃");
+            });
+        });
+    });
+    </script>
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@model BeeBilisim.Web.Models.AnasayfaMusteriYorumlariModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "YeniYorumEkle";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+<h2>Yeni Yorum Ekle</h2>
+
+@using (Html.BeginForm("YeniYorumEkle", "AdminPanel", FormMethod.Post))
+{
+    <div>
+        <div class="padding:10px;">
+            <label>Yorum </label><br />
+            @Html.TextAreaFor(q => q.Yorum, new { @class = "form-control" })
+        </div>
+        <div class="padding:10px;">
+            <label>Müşteri Adı </label><br />
+            @Html.TextBoxFor(q => q.MusteriAdi, new { @class = "form-control" })
+        </div>
+                <div class="padding:10px;">
+            <label>Müşteri Title </label><br />
+            @Html.TextBoxFor(q => q.MusteriTitle, new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="hidden" name="CreateUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Ekle</button>
+        </div>
+    </div>
+}
+

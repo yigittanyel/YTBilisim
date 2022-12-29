@@ -1,0 +1,42 @@
+﻿@model BeeBilisim.Web.Models.EmailData
+
+@{
+    ViewData["Title"] = "MesajDetayi";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+
+<h2 style="text-align:center;">MESAJ DETAYI</h2> <br />
+
+
+                <div class="col-md-12">
+                    <div class="card card-primary card-outline">
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <div class="mailbox-read-info">
+                                <h4>Konu: @Model.Subject</h4>
+                                <h6>
+                                    Gönderen:<b> @Model.To</b> 
+                                    <span class="mailbox-read-time float-right">@Model.GonderilmeTarihi.ToString("MM/dd/yyyy H:mm")</span>
+                                </h6>
+                            </div>
+                            <!-- /.mailbox-read-info -->
+
+                            <!-- /.mailbox-controls -->
+                            <div class="mailbox-read-message">
+                                <p>
+                                    @Model.Body
+                                </p>
+                            </div>
+                            <!-- /.mailbox-read-message -->
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- /.card-footer -->
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+
+
+
+

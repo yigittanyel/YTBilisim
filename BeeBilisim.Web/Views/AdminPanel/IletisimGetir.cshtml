@@ -1,0 +1,48 @@
+﻿@model BeeBilisim.Web.Models.IletisimModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "IletisimGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+
+<h2> Slogan Bilgisi</h2>
+@using (Html.BeginForm("IletisimGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Adres Metin </label><br />
+            @Html.TextBoxFor(q => q.AdresMetin, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Adres IFrame(Google Haritalar Kodu) </label><br />
+            @Html.TextBoxFor(q => q.AdresIFrame, new { @class = "form-control" })
+        </div>
+         <div>
+            <label>Email </label><br />
+            @Html.TextBoxFor(q => q.Email, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Fax </label><br />
+            @Html.TextBoxFor(q => q.Fax, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Telefon </label><br />
+            @Html.TextBoxFor(q => q.Telefon, new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+

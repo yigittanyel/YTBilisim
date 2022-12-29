@@ -1,0 +1,42 @@
+﻿@model BeeBilisim.Web.Models.AnasayfaMusteriYorumlariModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+}
+
+
+
+<h2>Yorum Bilgisi</h2>
+@using (Html.BeginForm("YorumGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Yorum </label><br />
+            @Html.TextAreaFor(q => q.Yorum, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Müşteri Adı</label><br />
+            @Html.TextBoxFor(q => q.MusteriAdi, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Müşteri Title </label><br />
+            @Html.TextAreaFor(q => q.MusteriTitle, new { @class = "form-control" })
+        </div>
+        <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+
+

@@ -1,0 +1,40 @@
+﻿@using BeeBilisim.Web.Models
+@model List<Kullanicilars>
+@{
+    ViewData["Title"] = "KisiBilgileri";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<link href="d:\sihirlitus\projeler\beebilisim\beebilisim.web\wwwroot\twitter-bootstrap\css\bootstrap.min.css" rel="stylesheet" />
+<br>
+<h2 class="text-center" >SİSTEME  KAYITLI Kullanicilars</h2>
+<br />
+
+<a href="/AdminPanel/YeniKisiEkle/" class="btn btn-primary">Yeni Kişi Ekle</a><br />
+
+<br />
+<table class="table table-bordered col-md-12">
+    <thead style="text-align:center;">
+        <tr>
+            <th scope="col">AD</th>
+            <th scope="col">SOYAD</th>
+            <th scope="col">MAIL</th>
+            <th scope="col">TELEFON</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr style="text-align:center;">
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.Email</td>
+                <td>@x.Telefon</td>
+                <td><a href="/AdminPanel/KisiSil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinizden emin misiniz?');">Sil</a></td>
+                <td><a href="/AdminPanel/KisiGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

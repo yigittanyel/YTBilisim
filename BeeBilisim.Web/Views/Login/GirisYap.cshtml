@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GİRİŞ EKRANI</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Bee Bilişim, Mikro, Sihirli Tuş Yazılım">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<!-- css files -->
+	<link href="~/web/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //css files -->
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<!-- //google fonts -->
+
+</head>
+<body>
+
+	<div class="signupform">
+		<div class="container">
+			<!-- main content -->
+			<div class="agile_info">
+				<div class="w3l_form">
+					<div class="left_grid_info">
+						<h1 style="text-align:center;">ADMİN KONTROL PANELİ GİRİŞİ</h1>
+						<img src="~/web/images/image.jpg" alt="" />
+					</div>
+				</div>
+				<div class="w3_info">
+					<h2>GİRİŞ YAPIN</h2>
+					<form action="#" method="post" id="girisYap">
+						<label>Email Adresi</label>
+						<div class="input-group">
+							<span class="fa fa-envelope" aria-hidden="true"></span>
+							<input type="email" placeholder="Email adresini giriniz:" required="" name="Email">
+						</div>
+
+						<label>Şifre</label>
+						<div class="input-group">
+							<span class="fa fa-lock" aria-hidden="true"></span>
+							<input type="Password" placeholder="Şifrenizi giriniz:" required="" name="Sifre">
+						</div>
+
+						@*					<div class="login-check">
+						<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Remember me</label>
+						</div>	*@
+						<label>Güvenlik Kodu</label><hr />
+							<dnt-captcha asp-captcha-generator-max="999999"
+										 asp-captcha-generator-min="111111"
+										 asp-captcha-generator-language="Turkish"
+										 asp-captcha-generator-display-mode="ShowDigits"
+										 asp-use-relative-urls="true"
+										 asp-font-name="Tahoma"
+										 asp-font-size="20"
+										 asp-fore-color="#333333"
+										 asp-back-color="#FCF6F5FF"
+										 asp-text-box-class="form-control"
+										 asp-placeholder=""
+										 asp-text-box-template="<hr><div><input autocomplete='' style='border:none;outline:none;height:40px;' class='input-group col-md-3' data-val='true' dir='ltr' id='DNTCaptchaInputText' name='DNTCaptchaInputText' placeholder='Lütfen kodu giriniz:' required='required' type='text' value='' /></div>"
+										 asp-validation-message-class="text-danger"
+										 asp-refresh-button-class="bi-arrow-counterclockwise btn-lg"
+										 asp-show-refresh-button="true"
+										 asp-dir="ltr" />
+
+						@if(TempData["captchaError"] !=null){
+							<span class="text-danger alert alert-danger"> @TempData["captchaError"]<br><br /></span>
+						}
+						@if (TempData["loginError"] != null)
+						{
+							<span class="text-danger alert alert-danger"> @TempData["loginError"]<br><br /></span>
+						}
+						<button class="btn btn-danger btn-block" type="submit">GİRİŞ</button>
+					</form>
+				</div>
+			</div>
+			<!-- //main content -->
+		</div>
+	</div>
+
+
+</body>
+</html>
+
+
+

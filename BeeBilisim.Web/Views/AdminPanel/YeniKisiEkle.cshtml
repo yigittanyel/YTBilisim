@@ -1,0 +1,53 @@
+﻿@model BeeBilisim.Web.Models.Kullanicilars
+
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+
+@{
+    ViewData["Title"] = "YeniKisiEkle";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+<h2>Yeni Kişi Ekle</h2>
+
+@using (Html.BeginForm("YeniKisiEkle", "AdminPanel", FormMethod.Post))
+{
+    <div>
+        <div class="padding:10px;">
+            <label>Ad: </label><br />
+            @Html.TextBoxFor(q => q.Ad, new { @class = "form-control",required = "required" })
+        </div>
+        <div>
+            <label>Soyad: </label><br />
+            @Html.TextBoxFor(q => q.Soyad, new { @class = "form-control",required = "required" })
+        </div>
+        <div>
+            <label>Telefon: </label><br />
+            @Html.TextBoxFor(q => q.Telefon, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Mail: </label><br />
+            @Html.TextBoxFor(q => q.Email, new { @class = "form-control",required = "required" })
+        </div>
+        <div>
+            <label>Şifre:</label><br />
+            @Html.PasswordFor(q => q.Sifre, new { @class = "form-control",required = "required" })
+        </div>
+        <div>
+            <label>Şifreyi bir kez daha girin:</label><br />
+            @Html.PasswordFor(q => q.Sifre2, new { @class = "form-control",required = "required" })
+        </div>
+        <div>
+            <input type="hidden" name="CreateUser" value="@displayName">
+        </div>
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Ekle</button>
+        </div><br>
+        <b>  @ViewBag.hata  </b>
+    </div>
+}

@@ -1,0 +1,56 @@
+﻿@model BeeBilisim.Web.Models.ReferasanslarModel
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Http
+
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "ReferanslariGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+
+    string displayName = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+
+}
+
+<h2>Referans Bilgisi</h2>
+<form asp-action="ReferanslariGuncelle" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="" style="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div class="col-md-3">
+            <label>
+                Referans Website Adresi: :
+            </label><br />
+            @Html.TextBoxFor(q => q.ReferansWebsite, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            <label>
+                Kaçıncı Sırada Gösterilsin?
+            </label><br />
+            @Html.TextBoxFor(q => q.Sira, new { @class = "form-control" })
+        </div>
+        <div class="col-md-3">
+            <label>
+                Referans Logosu:
+            </label>
+        </div>
+        <div class="col-md-3">
+            <td> <img src="@("~/images/"+ Model.ImageName)" asp-append-version="true" class="text-center" style="width:100%; height:250px;" /> </td>
+            <br> 
+            <br>
+            <div class="form-group">
+                <b>DOSYA SEÇİNİZ</b><br />
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            
+
+        </div>
+                <div>
+            <input type="hidden" name="LastupUser" value="@displayName">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="GÜNCELLE" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

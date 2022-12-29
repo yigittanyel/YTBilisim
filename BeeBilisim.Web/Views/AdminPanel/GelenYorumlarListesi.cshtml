@@ -1,0 +1,39 @@
+﻿@using BeeBilisim.Web.Models
+@model List<AnasayfaMusteriYorumlariModel>
+@{
+    ViewData["Title"] = "GelenYorumlarListesi";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+<br />
+<h2 class="text-center">MEVCUT MÜŞTERİ YORUMLARI</h2>
+<br />
+
+<a href="/AdminPanel/YeniYorumEkle/" class="btn btn-primary">Yeni Yorum Ekle</a>
+<br />
+
+<br />
+<table class="table table-bordered col-md-12">
+    <thead>
+        <tr style="text-align:center;">
+            <th>Yorum</th>
+            <th>Müşteri Adı</th>
+            <th>Müşteri Title</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody style="text-align:center;">
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@(x.Yorum.Trim().Length <= 50 ? x.Yorum : x.Yorum.Substring(0, 50))</td>
+                <td>@x.MusteriAdi</td>
+                <td> @x.MusteriTitle</td>
+                <td><a href="/AdminPanel/YorumSil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinizden emin misiniz?');">Sil</a></td>
+                <td><a href="/AdminPanel/YorumGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

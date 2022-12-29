@@ -1,0 +1,30 @@
+﻿@using BeeBilisim.Web.Models
+@model List<AnasayfaModel>
+@{
+    Layout = "";
+
+}
+
+<br>
+<h2 class="text-center">SLOGAN BİLGİSİ</h2>
+<br />
+<table class="table table-bordered col-md-12">
+    <thead>
+        <tr>
+            <th scope="col">Slogan Adı</th>
+            <th scope="col">Slogan Açıklaması</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Slogan</td>
+                <td>@x.SloganAciklama</td>
+                <td><a href="/AdminPanel/SloganGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

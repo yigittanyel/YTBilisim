@@ -1,0 +1,49 @@
+﻿
+@using BeeBilisim.Web.Models
+@model List<AnaSayfaSliderModel>
+
+@{
+    ViewData["Title"] = "SliderListesi";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+
+
+<br>
+<h2 class="text-center">SİSTEMDE YÜKLÜ SLİDERLAR</h2>
+<br />
+
+<a href="/AdminPanel/YeniSliderEkle/" class="btn btn-primary">Yeni Slider Ekle</a>
+<br />
+
+<br />
+<table class="table table-bordered col-md-12">
+    <thead>
+        <tr style="text-align:center;">
+            <th>Slide</th>
+            <th>Sıra</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody style="text-align:center;">
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td> <img src="@x.FotoUrl" id="foto" /></td>
+                <td> @x.Sira</td>
+                <td><a href="/AdminPanel/SliderSil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinizden emin misiniz?');">Sil</a></td>
+                <td><a href="/AdminPanel/SliderGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    #foto {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+    }
+</style>

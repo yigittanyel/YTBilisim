@@ -1,0 +1,53 @@
+﻿@using BeeBilisim.Web.Models
+@model List<ReferasanslarModel>
+
+@{
+    ViewData["Title"] = "ReferansListesi";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+
+<br>
+<h2 class="text-center">SİSTEMDE YÜKLÜ REFERANSLAR</h2>
+<br />
+
+<a href="/AdminPanel/ReferansEkle/" class="btn btn-primary">Yeni Referans Ekle</a>
+<br />
+
+<br />
+<table class="table table-bordered col-md-12">
+    <thead>
+        <tr style="text-align:center;">
+            <th>Referans Website</th>
+            <th>Sıra</th>
+            <th>Logo</th>
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody style="text-align:center;">
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td> @x.ReferansWebsite</td>
+                <td> @x.Sira</td>
+                <td> <img src="@("~/images/"+x.ImageName)" asp-append-version="true" class="text-center" id="foto" /> </td>
+
+                <td><a href="/AdminPanel/ReferansSil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinizden emin misiniz?');">Sil</a></td>
+                <td><a href="/AdminPanel/ReferanslariGetir/@x.Id" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    #foto {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        height:150px;
+        width:150px;
+    }
+
+</style>
+

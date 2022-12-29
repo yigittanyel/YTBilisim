@@ -1,0 +1,28 @@
+﻿@model BeeBilisim.Web.Models.AnaSayfaSliderModel
+
+@{
+    ViewData["Title"] = "SliderGetir";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h2>Slider Bilgisi</h2>
+@using (Html.BeginForm("SliderGuncelle", "AdminPanel", FormMethod.Post))
+{
+    <div class="padding:10px;">
+        @Html.HiddenFor(x => x.Id)
+        <div>
+            <label>Slider Url: </label><br />
+            @Html.TextBoxFor(q => q.FotoUrl, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Kaçıncı Sırada Gösterilsin?: </label><br />
+            @Html.TextBoxFor(q => q.Sira, new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+    </div>
+}
+
+
