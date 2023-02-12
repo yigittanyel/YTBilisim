@@ -34,7 +34,7 @@ namespace BeeBilisim.Web.Models
         public EmailData()
         {
             From = "tanyelyigit@gmail.com";
-            Password = "mosmfvafzrcjlsqb";
+            Password = "my-password";
         }
     }
 }
